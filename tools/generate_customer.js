@@ -1,4 +1,4 @@
-const gen = require('../generator')
+const gen = require('./generator')
 const { Command } = require('commander')
 const program = new Command();
 const fs = require('fs');

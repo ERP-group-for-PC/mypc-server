@@ -1,0 +1,7 @@
+{
+    "host": "18.136.53.197",
+    "port": "3306",
+    "user": "cheng",
+    "password": "Cheng123",
+    "database": "storage"
+}
