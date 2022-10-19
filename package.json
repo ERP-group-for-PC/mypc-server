@@ -9,7 +9,10 @@
     "commander": "^9.4.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "figlet": "^1.5.2",
+    "inquirer": "8.1.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "shelljs": "^0.8.5"
   }
 }

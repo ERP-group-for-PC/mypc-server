@@ -8,7 +8,7 @@ const mysql = require('mysql');
 var columns = [];
 var record = [];
 
-// 
+// 暂时还不能直接插入数据
 // program
 //     .command('column <name> [otherNames...]')
 //     .description('The columns of the table you use')

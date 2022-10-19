@@ -6,14 +6,14 @@ const firstNames = [
     'Gao', 'Li', 'Liu',
     'Ma', 'Mei', 'Mu', 
     'Xie', 'Wang', 'Zhang',
-    'Zheng', 'Lai', 'Yu'
+    'Zheng', 'Lai', 'Yu',
 ];
 
 const lastNames = [
     'Anna', 'Andrew', 'Angel',
     'Bob', 'Bruno', 'Bill',
     'Cristiano', 'Edward', 'Edsen',
-    'John', 'Jonny', 'Miller'
+    'John', 'Jonny', 'Miller',
 ];
 
 const cities = [
@@ -23,7 +23,7 @@ const cities = [
     'Shenzhen',
     'Tokyo',
     'London',
-    'New York'
+    'New York',
 ];
 
 const streets = [
@@ -42,15 +42,15 @@ const letters = [
     'k', 'l', 'm', 'n', 'o',
     'p', 'q', 'r', 's', 't',
     'u', 'v', 'w', 'x', 'y', 
-    'z'
+    'z',
 ];
 
 const telHead = [
-    '183', '188', '152', '150', '186', '177' 
+    '183', '188', '152', '150', '186', '177',
 ]
 
 const specials = [
-    '*', '#', '$', '%', '^', '&'
+    '*', '#', '$', '%', '^', '&', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
 ];
 
 program
@@ -97,7 +97,7 @@ function addressGen() {
     return address; 
 }
 
-function strGen(len, upper=false, special=false, onlyNum=false, telStyle=false) {
+function strGen(len=10, upper=false, special=false, onlyNum=false, telStyle=false) {
     var count = 0;
     var str = '';
     if (telStyle) {
@@ -122,7 +122,7 @@ function strGen(len, upper=false, special=false, onlyNum=false, telStyle=false) 
                 letter = letters[lRand].toUpperCase();
             }
             else if (special === true) {
-                letter = specials[Math.floor(Math.random() * 6)];
+                letter = specials[Math.floor(Math.random() * 16)];
             }
             else {
                 var lRand = Math.floor(Math.random() * 26);

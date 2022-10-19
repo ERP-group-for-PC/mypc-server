@@ -14,7 +14,7 @@ console.log(options.num);
 
 for (var i = 0; i < options.num; ++i) {
     var account = gen.nameGen();
-    var tel = '193-4324-4342';
+    var tel = gen.strGen(11, false, false, true, true);
     var email = 'mkmk232142@qq.com';
     var level = Math.random();
     var record = {
@@ -30,10 +30,10 @@ let str = JSON.stringify(customers, null, '\t');
 
 fs.writeFile('../data/customer.json', str, (err) => {
     if (err) {
-        res
-            .status(500)
-            .send('Server is error...');
-    }
+        console.log('An error has occurred ', err);
+        return;
+      }
+      console.log('Data written successfully to disk');
 });
 
 console.log(customers);
