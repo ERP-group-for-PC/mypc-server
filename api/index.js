@@ -1,5 +1,5 @@
-const market = require('./customer')
+const customer = require('./customer')
 
 module.exports = (app) => {
-    app.use('/customer', market);
+    app.use('/api/customer', customer);
 };

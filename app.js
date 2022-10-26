@@ -11,21 +11,22 @@ app.use(cors());
 app.use(express.urlencoded({extended: false}));
 api(app)
 
-connect('market');
+// var connetion = connect('market');
 
-app.get("/get", (req, res) => {
-    marketConn.query("select * from customer", (error, result) => {
-        if (error) throw error;
-        res.send({
-            message: "success",
-            status: 200,
-            data: result,
-        });
-        console.log("get success!");
-    });
-});
+// app.get("/get", (req, res) => {
+//     connetion.query("select * from customer", (error, result) => {
+//         if (error) throw error;
+//         res.send({
+//             message: "success",
+//             status: 200,
+//             data: result,
+//         });
+//         console.log("get success!");
+//     });
+// });
 
 app.get('/api', (req, res) => {
+    console.log("hello world");
     res.send('Hello World');
 });
 

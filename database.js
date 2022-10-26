@@ -12,4 +12,5 @@ module.exports = (database) => {
     const connection = mysql.createConnection(config);
     
     connection.connect();
+    return connection;
 } 

@@ -101,4 +101,7 @@ for (var i = 0; i < record.length; ++i) {
         }
         console.log("INSERT SUCCESS");
     });
+    if (i === record.length - 1) {
+        process.exit(0);
+    }
 }
